@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="Elia Goldsmiths Group — gold and silver trading, precious metals and jewellery services in the United Kingdom.">
+  <title>Elia Goldsmiths Group | Precious Metals</title>
+  <style>
+    :root {
+      --black: #0b0b0b;
+      --gold: #d6b56d;
+      --cream: #f7f3e9;
+      --muted: #bdb8ac;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--cream);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+    a {
+      color: inherit;
+    }
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+    header {
+      border-bottom: 1px solid #302a1e;
+      padding: 22px 0;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+    .nav-link {
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .hero {
+      padding: 95px 0 85px;
+      text-align: center;
+      background: radial-gradient(ellipse at top, #292113 0%, var(--black) 67%);
+    }
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+    }
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.2;
+    }
+    h1 {
+      max-width: 850px;
+      margin: 22px auto;
+      font-size: clamp(38px, 7vw, 68px);
+      font-weight: normal;
+    }
+    .gold {
+      color: var(--gold);
+    }
+    .hero p {
+      max-width: 640px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+    .button {
+      display: inline-block;
+      padding: 13px 23px;
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      background: var(--gold);
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+    }
+    .button-outline {
+      background: transparent;
+      color: var(--gold);
+    }
+    section.content {
+      padding: 65px 0;
+    }
+    .section-heading {
+      text-align: center;
+      color: var(--gold);
+      font-size: 34px;
+      font-weight: normal;
+      margin: 0 0 15px;
+    }
+    .intro {
+      max-width: 680px;
+      margin: 0 auto 35px;
+      text-align: center;
+      color: var(--muted);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      padding: 25px;
+      border: 1px solid #403522;
+      background: #11100d;
+    }
+    .card h3 {
+      color: var(--gold);
+      font-size: 22px;
+      font-weight: normal;
+    }
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .notice {
+      border-top: 1px solid #302a1e;
+      border-bottom: 1px solid #302a1e;
+      background: #100f0c;
+    }
+    .contact {
+      text-align: center;
+    }
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid #302a1e;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media (max-width: 500px) {
+      .hero {
+        padding: 70px 0;
+      }
+      .brand {
+        font-size: 18px;
+      }
+      .nav {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">ELIA GOLDSMITHS GROUP</a>
+      <a class="nav-link" href="#services">Our services</a>
+      <a class="nav-link" href="#about">About us</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow">Precious metals · United Kingdom</div>
+        <h1>Tradition, trust &amp; <span class="gold">precious value.</span></h1>
+        <p>
+          Welcome to Elia Goldsmiths Group. We are building a business
+          focused on gold and silver, precious metals and jewellery.
+          Contact us to discuss your requirements.
+        </p>
+        <a class="button" href="https://wa.me/447927999822">Contact us on WhatsApp</a>
+        <a class="button button-outline" href="#services">Explore our services</a>
+      </div>
+    </section>
+    <section class="content" id="services">
+      <div class="container">
+        <h2 class="section-heading">Our Services</h2>
+        <p class="intro">
+          Our focus is precious metals, with an emphasis on careful
+          handling, clear communication and professional service.
+          Please contact us to discuss current services and availability.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>Gold &amp; Silver</h3>
+            <p>
+              Enquiries about gold and silver items, precious metals
+              and potential buying or selling opportunities.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Precious Metals Refining</h3>
+            <p>
+              Speak to us about precious-metal refining enquiries,
+              material assessment and possible future services.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Jewellery</h3>
+            <p>
+              Jewellery-related enquiries, design ideas and
+              precious-metal craftsmanship.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="content notice" id="about">
+      <div class="container">
+        <h2 class="section-heading">About Elia Goldsmiths Group</h2>
+        <p class="intro">
+          Our ambition is to build a trusted name in the precious-metals
+          industry. We aim to grow responsibly, develop our expertise
+          and provide clear information to every customer.
+        </p>
+      </div>
+    </section>
+    <section class="content contact" id="contact">
+      <div class="container">
+        <h2 class="section-heading">Start a Conversation</h2>
+        <p class="intro">
+          Have a question about gold, silver or jewellery?
+          Contact us directly on WhatsApp.
+        </p>
+        <a class="button" href="https://wa.me/447927999822">
+          Message us on WhatsApp
+        </a>
+        <p style="color: #bdb8ac; font-size: 13px;">
+          WhatsApp: +44 7927 999822
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Elia Goldsmiths Group. All rights reserved.</p>
+      <p>Website information is provided for general guidance. Contact us to confirm services and availability.</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
