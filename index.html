@@ -2,932 +2,535 @@
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0b0b0b">
-
-  <meta name="description"
-    content="Elia Goldsmiths Group — precious metals, gold buying, bullion and investment education in the United Kingdom.">
-
-  <title>Elia Goldsmiths Group | Precious Metals</title>
-
+  <meta name="description" content="Elia Goldsmiths Group buys scrap gold and silver and sells new gold and silver products. Contact us to discuss your precious metals.">
+  <title>Elia Goldsmiths Group | Gold & Silver</title>
   <style>
     :root {
       --black: #0b0b0b;
       --panel: #151515;
-      --panel-light: #202020;
       --gold: #d6b56d;
       --light-gold: #f2dfaa;
-      --white: #ffffff;
-      --muted: #b9b9b9;
-      --border: rgba(214, 181, 109, 0.25);
-      --green: #8bd3a1;
+      --white: #f8f6f0;
+      --muted: #b8b4aa;
+      --border: rgba(214,181,109,.28);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 85px;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       background: var(--black);
       color: var(--white);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Arial, sans-serif;
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
     }
 
-    a {
-      color: inherit;
+    a { color: inherit; }
+
+    .announcement {
+      padding: 9px 16px;
+      text-align: center;
+      background: #17140e;
+      color: var(--light-gold);
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11,11,11,.97);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--light-gold);
+      text-decoration: none;
+      font-family: Georgia, serif;
+      font-size: 19px;
+      letter-spacing: 1.2px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      color: var(--white);
       text-decoration: none;
     }
 
-    button {
-      font: inherit;
+    .nav-links a:hover { color: var(--gold); }
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(ellipse at 80% 30%, rgba(160,117,39,.17), transparent 43%),
+        linear-gradient(120deg, #0b0b0b 35%, #17130c 100%);
+      border-bottom: 1px solid var(--border);
     }
 
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: 0 auto;
-    }
-
-    .gold {
-      color: var(--gold);
+    .hero-inner {
+      max-width: 1150px;
+      width: 100%;
+      margin: auto;
+      padding: 90px 22px;
     }
 
     .eyebrow {
       color: var(--gold);
-      font-size: 0.76rem;
-      font-weight: 800;
-      letter-spacing: 0.2em;
       text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: bold;
     }
 
-    .section {
-      padding: 66px 0;
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+
+    h1 {
+      max-width: 760px;
+      margin: 18px 0;
+      font-size: clamp(40px, 7vw, 76px);
+      line-height: 1.08;
+      font-weight: normal;
     }
 
-    .section-heading {
-      max-width: 720px;
-      margin-bottom: 30px;
-    }
+    h1 span { color: var(--gold); }
 
-    .section-heading h2 {
-      margin: 8px 0 12px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2rem, 7vw, 3rem);
-      font-weight: 500;
-      line-height: 1.15;
-    }
-
-    .section-heading p {
+    .hero p {
+      max-width: 630px;
       color: var(--muted);
-      margin: 0;
+      font-size: 17px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 30px;
     }
 
     .button {
-      display: inline-flex;
-      min-height: 46px;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 19px;
-      border: 1px solid var(--gold);
-      border-radius: 3px;
-      background: var(--gold);
-      color: var(--black);
-      font-size: 0.91rem;
-      font-weight: 800;
-      text-align: center;
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
-
-    .button:hover {
-      background: var(--light-gold);
-    }
-
-    .button-outline {
-      background: transparent;
-      color: var(--gold);
-    }
-
-    .button-outline:hover {
-      background: var(--gold);
-      color: var(--black);
-    }
-
-    .button-small {
-      min-height: 40px;
-      padding: 9px 13px;
-      font-size: 0.84rem;
-    }
-
-    /* Header */
-
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(11, 11, 11, 0.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(14px);
-    }
-
-    .header-inner {
-      display: flex;
-      min-height: 76px;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      min-width: 0;
-    }
-
-    .brand-mark {
-      display: grid;
-      width: 42px;
-      height: 42px;
-      flex-shrink: 0;
-      place-items: center;
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      font-family: Georgia, serif;
-      font-size: 1.4rem;
-    }
-
-    .brand-name {
-      font-family: Georgia, serif;
-      font-size: 0.94rem;
-      line-height: 1.25;
-      letter-spacing: 0.03em;
-    }
-
-    .brand-name span {
-      display: block;
-      margin-top: 3px;
-      color: var(--gold);
-      font-family: Arial, sans-serif;
-      font-size: 0.62rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .menu-button {
-      display: inline-flex;
-      min-width: 44px;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--border);
-      background: var(--panel);
-      color: var(--gold);
-      font-size: 1.3rem;
-      cursor: pointer;
-    }
-
-    .nav {
-      display: none;
-      padding: 8px 4% 18px;
-      border-top: 1px solid var(--border);
-    }
-
-    .nav.open {
-      display: grid;
-      gap: 4px;
-    }
-
-    .nav a {
-      padding: 11px 8px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .nav a:hover {
-      color: var(--gold);
-    }
-
-    /* Hero */
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 64px 0 55px;
-      border-bottom: 1px solid var(--border);
-      background:
-        radial-gradient(ellipse at 90% 10%,
-          rgba(214, 181, 109, 0.18), transparent 38%),
-        linear-gradient(135deg, #17140d 0%, #0b0b0b 58%, #17130b 100%);
-    }
-
-    .hero-grid {
-      display: grid;
-      align-items: center;
-      gap: 34px;
-    }
-
-    .hero h1 {
-      max-width: 760px;
-      margin: 14px 0 18px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.8rem, 11vw, 5rem);
-      font-weight: 500;
-      letter-spacing: -0.045em;
-      line-height: 1.02;
-    }
-
-    .hero-copy {
-      max-width: 600px;
-      color: #d0d0d0;
-      font-size: 1.02rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
-    }
-
-    .hero-art {
-      position: relative;
-      display: grid;
-      min-height: 235px;
-      overflow: hidden;
-      place-items: center;
-      border: 1px solid var(--border);
-      background:
-        radial-gradient(circle at center,
-          rgba(214, 181, 109, 0.13), transparent 56%),
-        linear-gradient(145deg, #242018, #0e0e0e 70%);
-    }
-
-    .hero-art::before,
-    .hero-art::after {
-      position: absolute;
-      content: "";
-      width: 190px;
-      height: 190px;
-      border: 1px solid rgba(214, 181, 109, 0.35);
-      transform: rotate(45deg);
-    }
-
-    .hero-art::after {
-      width: 145px;
-      height: 145px;
-      border-color: rgba(214, 181, 109, 0.55);
-    }
-
-    .hero-symbol {
-      position: relative;
-      z-index: 1;
-      color: var(--gold);
-      font-family: Georgia, serif;
-      font-size: 5rem;
-    }
-
-    .hero-caption {
-      position: absolute;
-      right: 12px;
-      bottom: 12px;
-      left: 12px;
-      z-index: 2;
-      color: var(--muted);
-      font-size: 0.73rem;
-      text-align: center;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    /* Promotional carousel */
-
-    .promo-section {
-      padding: 25px 0 10px;
-    }
-
-    .promo-card {
-      position: relative;
-      display: grid;
-      min-height: 260px;
-      overflow: hidden;
-      align-items: center;
-      padding: 28px 23px;
-      border: 1px solid var(--border);
-      background:
-        radial-gradient(ellipse at 100% 0%,
-          rgba(214, 181, 109, 0.19), transparent 45%),
-        linear-gradient(120deg, #191919, #111111);
-    }
-
-    .promo-card::after {
-      position: absolute;
-      top: -45px;
-      right: -35px;
-      width: 160px;
-      height: 210px;
-      border: 1px solid rgba(214, 181, 109, 0.22);
-      content: "";
-      transform: rotate(28deg);
-      pointer-events: none;
-    }
-
-    .promo-content {
-      position: relative;
-      z-index: 1;
-      max-width: 650px;
-    }
-
-    .promo-label {
       display: inline-block;
-      margin-bottom: 12px;
-      padding: 5px 9px;
-      border: 1px solid var(--border);
-      color: var(--gold);
-      font-size: 0.7rem;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      padding: 13px 21px;
+      border: 1px solid var(--gold);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: .5px;
     }
 
-    .promo-card h2 {
-      margin: 0 0 12px;
-      font-family: Georgia, serif;
-      font-size: clamp(1.8rem, 7vw, 2.7rem);
-      font-weight: 500;
-      line-height: 1.12;
-    }
-
-    .promo-card p {
-      max-width: 550px;
-      margin: 0 0 22px;
-      color: var(--muted);
-    }
-
-    .carousel-controls {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      margin-top: 13px;
-    }
-
-    .carousel-buttons {
-      display: flex;
-      gap: 8px;
-    }
-
-    .carousel-button {
-      width: 42px;
-      height: 42px;
-      border: 1px solid var(--border);
-      background: var(--panel);
-      color: var(--gold);
-      font-size: 1.15rem;
-      cursor: pointer;
-    }
-
-    .carousel-dots {
-      display: flex;
-      gap: 7px;
-    }
-
-    .carousel-dot {
-      width: 9px;
-      height: 9px;
-      padding: 0;
-      border: 0;
-      border-radius: 50%;
-      background: #555;
-      cursor: pointer;
-    }
-
-    .carousel-dot.active {
+    .button.primary {
       background: var(--gold);
+      color: #111;
     }
 
-    .demo-note {
-      margin-top: 13px;
-      color: #999;
-      font-size: 0.78rem;
+    .button.secondary { color: var(--light-gold); }
+
+    .button:hover { opacity: .85; }
+
+    section {
+      padding: 76px 22px;
+      scroll-margin-top: 85px;
     }
 
-    /* Cards */
-
-    .cards {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 15px;
+    .container {
+      max-width: 1100px;
+      margin: auto;
     }
 
-    .card {
-      padding: 23px;
+    .section-heading {
+      max-width: 700px;
+      margin: 0 auto 35px;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 10px 0 14px;
+      font-size: clamp(30px, 5vw, 43px);
+      font-weight: normal;
+    }
+
+    .section-heading p, .muted { color: var(--muted); }
+
+    .price-section { background: #101010; }
+
+    .price-status {
+      max-width: 760px;
+      margin: 0 auto 22px;
+      padding: 14px 16px;
       border: 1px solid var(--border);
-      background: var(--panel);
+      color: var(--light-gold);
+      text-align: center;
+      font-size: 13px;
     }
 
-    .card-icon {
-      margin-bottom: 13px;
-      color: var(--gold);
-      font-size: 1.65rem;
-    }
-
-    .card h3 {
-      margin: 0 0 9px;
-      font-family: Georgia, serif;
-      font-size: 1.35rem;
-      font-weight: 500;
-    }
-
-    .card p {
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .text-link {
-      color: var(--gold);
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-
-    /* Market dashboard */
-
-    .market-section {
-      background: #101010;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .market-status {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 9px;
-      margin-bottom: 22px;
-      padding: 13px 15px;
-      border: 1px solid var(--border);
-      background: #17150f;
-      color: #ddd;
-      font-size: 0.86rem;
-    }
-
-    .status-dot {
-      width: 9px;
-      height: 9px;
-      flex-shrink: 0;
-      border-radius: 50%;
-      background: var(--gold);
-    }
-
-    .market-grid {
+    .price-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
+      gap: 18px;
     }
 
-    .metal-card {
-      min-width: 0;
-      padding: 17px 13px;
-      border: 1px solid var(--border);
+    .price-card {
+      padding: 26px;
       background: var(--panel);
-    }
-
-    .metal-top {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-
-    .metal-symbol {
-      display: grid;
-      width: 34px;
-      height: 34px;
-      flex-shrink: 0;
-      place-items: center;
       border: 1px solid var(--border);
+    }
+
+    .price-card h3 {
+      margin: 0;
       color: var(--gold);
-      font-family: Georgia, serif;
-      font-size: 0.83rem;
+      font-size: 25px;
+      font-weight: normal;
     }
 
-    .metal-name {
-      font-size: 0.88rem;
-      font-weight: 750;
+    .price-value {
+      margin: 15px 0 3px;
+      font-size: 29px;
+      font-weight: bold;
     }
 
-    .metal-code {
+    .price-card p {
+      margin: 0;
       color: var(--muted);
-      font-size: 0.73rem;
+      font-size: 13px;
     }
-
-    .metal-price {
-      color: var(--gold);
-      font-size: 1rem;
-      font-weight: 800;
-      overflow-wrap: anywhere;
-    }
-
-    .metal-unit {
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 0.75rem;
-    }
-
-    .market-disclaimer {
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
-
-    /* Pricing table */
 
     .table-wrap {
       overflow-x: auto;
+      margin-top: 30px;
       border: 1px solid var(--border);
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      text-align: left;
+      min-width: 320px;
     }
 
-    th,
-    td {
-      padding: 15px 13px;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.87rem;
+    th, td {
+      padding: 13px 16px;
+      text-align: left;
+      border-bottom: 1px solid #302a1e;
+      font-size: 14px;
     }
 
     th {
-      background: #1c1912;
-      color: var(--gold);
-      font-weight: 750;
+      color: var(--light-gold);
+      background: #1a1711;
     }
 
-    td {
-      color: #ddd;
-    }
+    td { color: var(--muted); }
 
-    tr:last-child td {
-      border-bottom: 0;
-    }
-
-    .price-pending {
+    .note {
+      margin-top: 20px;
       color: var(--muted);
-      font-size: 0.8rem;
+      font-size: 12px;
     }
 
-    .notice {
-      margin-top: 18px;
-      padding: 17px;
-      border-left: 3px solid var(--gold);
-      background: var(--panel);
-      color: var(--muted);
-      font-size: 0.86rem;
-    }
-
-    /* Investment and about */
-
-    .investment-panel {
-      padding: 26px;
-      border: 1px solid var(--border);
-      background:
-        radial-gradient(ellipse at 100% 0%,
-          rgba(214, 181, 109, 0.11), transparent 55%),
-        var(--panel);
-    }
-
-    .investment-panel h3 {
-      margin-top: 0;
-      font-family: Georgia, serif;
-      font-size: 1.65rem;
-      font-weight: 500;
-    }
-
-    .investment-panel p,
-    .investment-panel li {
-      color: var(--muted);
-    }
-
-    .investment-panel li {
-      margin: 8px 0;
-    }
-
-    .about-grid {
+    .cards {
       display: grid;
-      gap: 25px;
-    }
-
-    .about-copy {
-      color: var(--muted);
-    }
-
-    .trust-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .trust-item {
-      padding: 16px;
-      border: 1px solid var(--border);
-      background: var(--panel);
-    }
-
-    .trust-item strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--gold);
-    }
-
-    .trust-item span {
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-
-    /* Contact */
-
-    .contact-section {
-      background: #11100c;
-      border-top: 1px solid var(--border);
-    }
-
-    .contact-grid {
-      display: grid;
-      gap: 20px;
-    }
-
-    .contact-box {
-      padding: 22px;
-      border: 1px solid var(--border);
-      background: var(--panel);
-    }
-
-    .contact-box h3 {
-      margin-top: 0;
-      color: var(--gold);
-      font-family: Georgia, serif;
-      font-size: 1.35rem;
-      font-weight: 500;
-    }
-
-    .contact-box p {
-      color: var(--muted);
-      overflow-wrap: anywhere;
-    }
-
-    .contact-box .button {
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    .visit-notice {
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-
-    /* Footer */
-
-    .footer {
-      padding: 30px 0;
-      border-top: 1px solid var(--border);
-      background: #080808;
-    }
-
-    .footer-inner {
-      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
 
-    .footer p {
-      color: var(--muted);
-      font-size: 0.8rem;
+    .card {
+      padding: 26px;
+      background: var(--panel);
+      border: 1px solid var(--border);
     }
 
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .footer-links a {
+    .card .number {
       color: var(--gold);
-      font-size: 0.84rem;
+      font-family: Georgia, serif;
+      font-size: 28px;
     }
 
-    .copyright {
-      margin-bottom: 0;
+    .card h3 {
+      margin: 12px 0 8px;
+      font-size: 23px;
+      font-weight: normal;
     }
 
-    /* Responsive layouts */
+    .card p { color: var(--muted); font-size: 14px; }
 
-    @media (min-width: 650px) {
-      .section {
-        padding: 82px 0;
-      }
+    .about-section { background: #101010; }
 
-      .hero {
-        padding: 85px 0;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1.25fr 0.75fr;
-      }
-
-      .hero-art {
-        min-height: 340px;
-      }
-
-      .promo-card {
-        min-height: 300px;
-        padding: 38px;
-      }
-
-      .cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .market-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-      }
-
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .footer-inner {
-        grid-template-columns: 1fr auto;
-        align-items: center;
-      }
+    .about-box {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
     }
 
-    @media (min-width: 900px) {
-      .menu-button {
-        display: none;
-      }
-
-      .header-inner {
-        min-height: 82px;
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        gap: 17px;
-        padding: 0;
-        border-top: 0;
-      }
-
-      .nav a {
-        padding: 8px 0;
-        font-size: 0.84rem;
-      }
-
-      .header-inner {
-        flex-wrap: wrap;
-      }
-
-      .hero-art {
-        min-height: 380px;
-      }
-
-      .cards {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .market-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .contact-grid {
-        grid-template-columns: 1.1fr 0.9fr;
-      }
+    .contact-box {
+      padding: 35px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      text-align: center;
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
+    .contact-box address {
+      margin: 20px 0;
+      color: var(--muted);
+      font-style: normal;
+    }
 
-      *,
-      *::before,
-      *::after {
-        transition-duration: 0.01ms !important;
-      }
+    footer {
+      padding: 28px 22px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    footer a { color: var(--light-gold); }
+
+    @media (max-width: 720px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 12px; }
+      .hero { min-height: 490px; }
+      .hero-inner { padding: 65px 22px; }
+      .price-grid, .cards { grid-template-columns: 1fr; }
+      section { padding: 58px 18px; }
+      .contact-box { padding: 25px 18px; }
     }
   </style>
 </head>
-
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="Elia Goldsmiths Group home">
-        <span class="brand-mark">E</span>
-        <span class="brand-name">
-          Elia Goldsmiths Group
-          <span>Precious metals &amp; bullion</span>
-        </span>
-      </a>
+  <div class="announcement">
+    PRECIOUS METALS • PERSONAL SERVICE • CONTACT US BEFORE VISITING
+  </div>
 
-      <button
-        class="menu-button"
-        id="menuButton"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="mainNav">
-        ☰
-      </button>
-
-      <nav class="nav" id="mainNav" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#markets">Metal markets</a>
-        <a href="#buying-prices">Buying prices</a>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home">ELIA GOLDSMITHS GROUP</a>
+      <div class="nav-links">
+        <a href="#prices">Prices</a>
+        <a href="#services">Buying & Selling</a>
         <a href="#investment">Investment</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">A considered approach to precious metals</div>
-
-          <h1>
-            The value of<br>
-            <span class="gold">precious metals.</span>
-          </h1>
-
-          <p class="hero-copy">
-            Explore gold and silver buying, discover bullion products
-            and learn about precious metals with Elia Goldsmiths Group.
-          </p>
-
-          <div class="hero-actions">
-            <a class="button" href="#buying-prices">
-              Explore gold buying
-            </a>
-
-            <a class="button button-outline" href="#contact">
-              Contact our team
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-art" aria-label="Decorative gold-inspired design">
-          <div class="hero-symbol" aria-hidden="true">E</div>
-          <div class="hero-caption">
-            Professional service · Precious metals
-          </div>
+      <div class="hero-inner">
+        <div class="eyebrow">Gold • Silver • Precious Metals</div>
+        <h1>Precious metals.<br><span>Handled with confidence.</span></h1>
+        <p>
+          We buy scrap gold and scrap silver, and offer a selection of
+          brand-new gold and silver products. Clear communication,
+          professional service and a commitment to trust.
+        </p>
+        <div class="buttons">
+          <a class="button primary" href="https://wa.me/447927999822">Contact us on WhatsApp</a>
+          <a class="button secondary" href="#prices">Explore our prices</a>
         </div>
       </div>
     </section>
 
-    <!-- Promotional carousel: sample content, not live offers. -->
-
-    <section class="promo-section" aria-label="Featured information">
+    <section class="price-section" id="prices">
       <div class="container">
-        <div class="promo-card" id="promoCard">
-          <div class="promo-content" aria-live="polite">
-            <span class="promo-label" id="promoLabel">
-              Featured service
-            </span>
-
-            <h2 id="promoTitle">
-              Discover the world of precious metals
-            </h2>
-
-            <p id="promoText">
-              Speak with our team about gold and silver buying,
-              bullion products and your enquiries.
-            </p>
-
-            <a class="button" id="promoLink" href="#contact">
-              Speak to our team
-            </a>
-          </div>
+        <div class="section-heading">
+          <div class="eyebrow">Market information</div>
+          <h2>Gold & Silver Prices</h2>
+          <p>
+            Follow precious-metal market prices and explore our indicative
+            scrap-buying price categories.
+          </p>
         </div>
 
-        <div class="carousel-controls">
-          <div class="carousel-dots" id="carousel
+        <div class="price-status" role="status">
+          Live market data is not connected yet. Prices will appear here
+          after our market-data service is configured.
+        </div>
+
+        <div class="price-grid">
+          <article class="price-card">
+            <h3>Gold Spot Price</h3>
+            <div class="price-value">Awaiting live feed</div>
+            <p>GBP per gram • troy ounce • kilogram</p>
+          </article>
+          <article class="price-card">
+            <h3>Silver Spot Price</h3>
+            <div class="price-value">Awaiting live feed</div>
+            <p>GBP per gram • troy ounce • kilogram</p>
+          </article>
+        </div>
+
+        <h2 style="text-align:center; margin-top:48px;">Indicative Scrap Buying Prices</h2>
+        <p class="muted" style="text-align:center;">
+          Gold purity categories
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Gold purity</th>
+                <th>Gold content</th>
+                <th>Indicative buying price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>9ct gold</td><td>37.5%</td><td>Awaiting price setup</td></tr>
+              <tr><td>14ct gold</td><td>58.5%</td><td>Awaiting price setup</td></tr>
+              <tr><td>18ct gold</td><td>75.0%</td><td>Awaiting price setup</td></tr>
+              <tr><td>22ct gold</td><td>91.6%</td><td>Awaiting price setup</td></tr>
+              <tr><td>24ct gold</td><td>99.9% (approx.)</td><td>Awaiting price setup</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="muted" style="text-align:center; margin-top:30px;">
+          Silver buying prices will be added once we confirm the silver
+          grades and pricing rules.
+        </p>
+
+        <p class="note">
+          Important: All buying prices, when displayed, will be indicative
+          only and not a guaranteed offer. The final offer may depend on
+          verified purity, tested weight, condition, assessment and the
+          applicable buying terms. Market prices can change.
+        </p>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">What we do</div>
+          <h2>Buying & Selling Precious Metals</h2>
+          <p>
+            Whether you are looking to sell unwanted precious metals or
+            explore new products, contact us to discuss your requirements.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="number">01</div>
+            <h3>We Buy Scrap Gold</h3>
+            <p>
+              Contact us about unwanted gold items. We can discuss the
+              assessment process, purity and weight before a final offer.
+            </p>
+          </article>
+          <article class="card">
+            <div class="number">02</div>
+            <h3>We Buy Scrap Silver</h3>
+            <p>
+              Ask us about selling scrap silver. The applicable assessment
+              and buying terms will be explained before any transaction.
+            </p>
+          </article>
+          <article class="card">
+            <div class="number">03</div>
+            <h3>New Gold & Silver Products</h3>
+            <p>
+              Explore brand-new precious-metal products, including bullion
+              bars, coins, jewellery and other available items. Contact us
+              for current product details and availability.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="investment">
+      <div class="container">
+        <div class="about-box">
+          <div class="eyebrow">Learn about precious metals</div>
+          <h2>Understanding Gold & Silver</h2>
+          <p class="muted">
+            Gold and silver have different uses, market characteristics and
+            risks. Before purchasing, consider purity, premiums, storage,
+            authenticity, resale arrangements and transaction costs.
+          </p>
+          <p class="muted">
+            Precious-metal prices can rise or fall, and returns are not
+            guaranteed. Information on this website is general education,
+            not personalised financial or investment advice.
+          </p>
+          <a class="button secondary" href="#contact">Ask us a question</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-box">
+          <div class="eyebrow">Our company</div>
+          <h2>Elia Goldsmiths Group</h2>
+          <p class="muted">
+            Our aim is to provide a professional, straightforward point of
+            contact for customers interested in selling scrap gold and
+            silver or purchasing new precious-metal products.
+          </p>
+          <p class="muted">
+            We value clear communication, careful assessment and helping
+            customers understand the process before proceeding.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="price-section">
+      <div class="container">
+        <div class="contact-box">
+          <div class="eyebrow">Get in touch</div>
+          <h2>Let's Talk Precious Metals</h2>
+          <p class="muted">
+            Please contact us on WhatsApp before visiting so we can discuss
+            your enquiry and confirm the next steps.
+          </p>
+          <div class="buttons" style="justify-content:center;">
+            <a class="button primary" href="https://wa.me/447927999822">
+              Chat with us on WhatsApp
+            </a>
+          </div>
+          <address>
+            <strong style="color:var(--light-gold);">Business address</strong><br>
+            The Foundry Business Centre<br>
+            Grenley Street<br>
+            Knottingley, West Yorkshire<br>
+            WF11 8AX, United Kingdom
+          </address>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Elia Goldsmiths Group. All rights reserved.</p>
+    <p>Gold and silver prices are subject to market movements and applicable terms.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
