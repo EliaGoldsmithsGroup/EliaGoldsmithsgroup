@@ -3,522 +3,686 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b0b0b">
-  <meta name="description" content="Elia Goldsmiths Group buys scrap gold and silver and sells new gold and silver products. Contact us to discuss your precious metals.">
+  <meta name="theme-color" content="#082B45">
+  <meta name="description" content="Elia Goldsmiths Group buys scrap gold and silver and offers gold and silver bullion, coins and jewellery. Contact us for an enquiry.">
   <title>Elia Goldsmiths Group | Gold & Silver</title>
+
   <style>
     :root {
-      --black: #0b0b0b;
-      --panel: #151515;
-      --gold: #d6b56d;
-      --light-gold: #f2dfaa;
-      --white: #f8f6f0;
-      --muted: #b8b4aa;
-      --border: rgba(214,181,109,.28);
+      --ocean: #082B45;
+      --deep: #061C30;
+      --blue: #104665;
+      --light-blue: #1C5875;
+      --gold: #D4AF37;
+      --gold-light: #F3D879;
+      --white: #F5F7FA;
+      --muted: #B8C8D4;
+      --card: rgba(16, 70, 101, 0.72);
+      --border: rgba(212, 175, 55, 0.42);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
-      margin: 0;
-      background: var(--black);
-      color: var(--white);
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.65;
+      background: linear-gradient(160deg, var(--ocean), var(--deep) 70%);
+      color: var(--white);
+      line-height: 1.7;
     }
 
-    a { color: inherit; }
-
-    .announcement {
-      padding: 9px 16px;
-      text-align: center;
-      background: #17140e;
-      color: var(--light-gold);
-      font-size: 12px;
-      letter-spacing: 1px;
+    a {
+      color: inherit;
     }
 
     header {
+      background: rgba(6, 28, 48, 0.96);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 6%;
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(11,11,11,.97);
-      border-bottom: 1px solid var(--border);
+      z-index: 20;
+      backdrop-filter: blur(12px);
     }
 
-    .nav {
-      max-width: 1150px;
+    .header-inner {
+      max-width: 1200px;
       margin: auto;
-      padding: 18px 22px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
     }
 
     .brand {
-      color: var(--light-gold);
-      text-decoration: none;
-      font-family: Georgia, serif;
-      font-size: 19px;
-      letter-spacing: 1.2px;
+      color: var(--gold);
+      font-size: 1.15rem;
       font-weight: bold;
+      letter-spacing: 1px;
+      text-decoration: none;
     }
 
-    .nav-links {
+    nav {
       display: flex;
       flex-wrap: wrap;
       gap: 18px;
-      font-size: 13px;
     }
 
-    .nav-links a {
+    nav a {
       color: var(--white);
+      font-size: 0.9rem;
       text-decoration: none;
     }
 
-    .nav-links a:hover { color: var(--gold); }
-
-    .hero {
-      min-height: 570px;
-      display: flex;
-      align-items: center;
-      background:
-        radial-gradient(ellipse at 80% 30%, rgba(160,117,39,.17), transparent 43%),
-        linear-gradient(120deg, #0b0b0b 35%, #17130c 100%);
-      border-bottom: 1px solid var(--border);
+    nav a:hover,
+    nav a:focus {
+      color: var(--gold-light);
     }
 
-    .hero-inner {
-      max-width: 1150px;
-      width: 100%;
+    .hero {
+      max-width: 1200px;
       margin: auto;
-      padding: 90px 22px;
+      padding: 90px 6% 80px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at top, rgba(28, 88, 117, 0.7), transparent 65%);
     }
 
     .eyebrow {
-      color: var(--gold);
+      color: var(--gold-light);
       text-transform: uppercase;
       letter-spacing: 3px;
-      font-size: 11px;
+      font-size: 0.8rem;
       font-weight: bold;
     }
 
-    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
-
     h1 {
-      max-width: 760px;
-      margin: 18px 0;
-      font-size: clamp(40px, 7vw, 76px);
-      line-height: 1.08;
-      font-weight: normal;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.5rem, 7vw, 4.8rem);
+      line-height: 1.12;
+      margin: 22px auto;
+      max-width: 950px;
+      color: var(--gold-light);
     }
-
-    h1 span { color: var(--gold); }
 
     .hero p {
-      max-width: 630px;
       color: var(--muted);
-      font-size: 17px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-      margin-top: 30px;
+      max-width: 720px;
+      margin: 0 auto 28px;
+      font-size: 1.08rem;
     }
 
     .button {
       display: inline-block;
-      padding: 13px 21px;
-      border: 1px solid var(--gold);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: .5px;
-    }
-
-    .button.primary {
       background: var(--gold);
-      color: #111;
+      color: var(--deep);
+      padding: 13px 22px;
+      margin: 6px;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 1px solid var(--gold);
+      transition: 0.2s;
     }
 
-    .button.secondary { color: var(--light-gold); }
+    .button:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
 
-    .button:hover { opacity: .85; }
+    .button-outline {
+      color: var(--gold-light);
+      background: transparent;
+    }
+
+    .button-outline:hover {
+      color: var(--deep);
+    }
 
     section {
-      padding: 76px 22px;
+      padding: 65px 6%;
       scroll-margin-top: 85px;
     }
 
-    .container {
-      max-width: 1100px;
+    .section-inner {
+      max-width: 1200px;
       margin: auto;
     }
 
     .section-heading {
-      max-width: 700px;
-      margin: 0 auto 35px;
       text-align: center;
+      margin-bottom: 35px;
     }
 
     h2 {
-      margin: 10px 0 14px;
-      font-size: clamp(30px, 5vw, 43px);
-      font-weight: normal;
+      color: var(--gold-light);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      line-height: 1.25;
+      margin-bottom: 12px;
     }
 
-    .section-heading p, .muted { color: var(--muted); }
+    .section-heading p,
+    .muted {
+      color: var(--muted);
+    }
 
-    .price-section { background: #101010; }
+    .promo {
+      background: linear-gradient(120deg, #104665, #082B45 65%, #061C30);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
 
-    .price-status {
-      max-width: 760px;
-      margin: 0 auto 22px;
-      padding: 14px 16px;
-      border: 1px solid var(--border);
-      color: var(--light-gold);
+    .promo-card {
+      max-width: 900px;
+      margin: auto;
+      padding: 35px 25px;
       text-align: center;
-      font-size: 13px;
-    }
-
-    .price-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .price-card {
-      padding: 26px;
-      background: var(--panel);
       border: 1px solid var(--border);
+      background: rgba(6, 28, 48, 0.55);
+      border-radius: 10px;
     }
 
-    .price-card h3 {
-      margin: 0;
+    .promo-card h2 {
+      font-size: 2rem;
+    }
+
+    .promo-card p {
+      color: var(--muted);
+    }
+
+    .dots {
       color: var(--gold);
-      font-size: 25px;
-      font-weight: normal;
+      margin-top: 15px;
+      letter-spacing: 6px;
     }
 
-    .price-value {
-      margin: 15px 0 3px;
-      font-size: 29px;
-      font-weight: bold;
-    }
-
-    .price-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .table-wrap {
-      overflow-x: auto;
-      margin-top: 30px;
-      border: 1px solid var(--border);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 320px;
-    }
-
-    th, td {
-      padding: 13px 16px;
-      text-align: left;
-      border-bottom: 1px solid #302a1e;
-      font-size: 14px;
-    }
-
-    th {
-      color: var(--light-gold);
-      background: #1a1711;
-    }
-
-    td { color: var(--muted); }
-
-    .note {
-      margin-top: 20px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .cards {
+    .grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      gap: 20px;
     }
 
     .card {
-      padding: 26px;
-      background: var(--panel);
+      background: var(--card);
       border: 1px solid var(--border);
-    }
-
-    .card .number {
-      color: var(--gold);
-      font-family: Georgia, serif;
-      font-size: 28px;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
     }
 
     .card h3 {
-      margin: 12px 0 8px;
-      font-size: 23px;
-      font-weight: normal;
+      color: var(--gold-light);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
     }
 
-    .card p { color: var(--muted); font-size: 14px; }
-
-    .about-section { background: #101010; }
-
-    .about-box {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .contact-box {
-      padding: 35px;
-      border: 1px solid var(--border);
-      background: var(--panel);
-      text-align: center;
-    }
-
-    .contact-box address {
-      margin: 20px 0;
+    .card p {
       color: var(--muted);
-      font-style: normal;
+    }
+
+    .card .icon {
+      font-size: 1.9rem;
+      margin-bottom: 12px;
+    }
+
+    .dashboard {
+      background: rgba(6, 28, 48, 0.55);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .metal-card {
+      text-align: center;
+      padding: 22px 12px;
+    }
+
+    .metal-symbol {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .metal-name {
+      color: var(--white);
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .price-unavailable {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .notice {
+      margin: 25px auto 0;
+      padding: 16px;
+      max-width: 850px;
+      border-left: 3px solid var(--gold);
+      background: rgba(212, 175, 55, 0.08);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .purity {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .purity strong {
+      color: var(--gold-light);
+    }
+
+    .contact-panel {
+      background: linear-gradient(135deg, #104665, #061C30);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 32px;
+    }
+
+    .contact-panel p {
+      color: var(--muted);
+      margin: 8px 0;
+      overflow-wrap: anywhere;
     }
 
     footer {
-      padding: 28px 22px;
+      background: var(--deep);
       border-top: 1px solid var(--border);
-      color: var(--muted);
+      padding: 30px 6%;
       text-align: center;
-      font-size: 12px;
+      color: var(--muted);
+      font-size: 0.85rem;
     }
 
-    footer a { color: var(--light-gold); }
+    footer a {
+      color: var(--gold-light);
+      margin: 0 8px;
+    }
 
-    @media (max-width: 720px) {
-      .nav { align-items: flex-start; flex-direction: column; }
-      .nav-links { gap: 12px; }
-      .hero { min-height: 490px; }
-      .hero-inner { padding: 65px 22px; }
-      .price-grid, .cards { grid-template-columns: 1fr; }
-      section { padding: 58px 18px; }
-      .contact-box { padding: 25px 18px; }
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .header-inner {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 65px;
+      }
+
+      section {
+        padding: 48px 5%;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      .brand {
+        text-align: center;
+      }
     }
   </style>
 </head>
-<body>
-  <div class="announcement">
-    PRECIOUS METALS • PERSONAL SERVICE • CONTACT US BEFORE VISITING
-  </div>
 
+<body>
   <header>
-    <nav class="nav" aria-label="Main navigation">
+    <div class="header-inner">
       <a class="brand" href="#home">ELIA GOLDSMITHS GROUP</a>
-      <div class="nav-links">
-        <a href="#prices">Prices</a>
-        <a href="#services">Buying & Selling</a>
+
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#markets">Metals</a>
+        <a href="#prices">Buying Guide</a>
         <a href="#investment">Investment</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-inner">
-        <div class="eyebrow">Gold • Silver • Precious Metals</div>
-        <h1>Precious metals.<br><span>Handled with confidence.</span></h1>
-        <p>
-          We buy scrap gold and scrap silver, and offer a selection of
-          brand-new gold and silver products. Clear communication,
-          professional service and a commitment to trust.
-        </p>
-        <div class="buttons">
-          <a class="button primary" href="https://wa.me/447927999822">Contact us on WhatsApp</a>
-          <a class="button secondary" href="#prices">Explore our prices</a>
-        </div>
-      </div>
+      <div class="eyebrow">Precious Metals · Quality · Trust</div>
+      <h1>Where Precious Metals Meet Excellence</h1>
+      <p>
+        Welcome to Elia Goldsmiths Group. We buy scrap gold and scrap silver
+        and offer gold and silver products, including bullion bars, coins
+        and jewellery. Contact us to discuss your requirements.
+      </p>
+      <a class="button"
+         href="https://wa.me/447927999822"
+         target="_blank" rel="noopener noreferrer">
+        Enquire on WhatsApp
+      </a>
+      <a class="button button-outline" href="#services">
+        Explore Our Services
+      </a>
     </section>
 
-    <section class="price-section" id="prices">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Market information</div>
-          <h2>Gold & Silver Prices</h2>
-          <p>
-            Follow precious-metal market prices and explore our indicative
-            scrap-buying price categories.
+    <section class="promo">
+      <div class="section-inner">
+        <div class="promo-card">
+          <div class="eyebrow">Featured Information</div>
+          <h2 id="promo-title">Discover Our Precious Metals Services</h2>
+          <p id="promo-text">
+            Speak with our team about selling scrap gold or silver
+            or enquiring about gold and silver products.
           </p>
+          <a class="button" href="#contact">Make an Enquiry</a>
+          <div class="dots" aria-hidden="true">● ● ●</div>
         </div>
-
-        <div class="price-status" role="status">
-          Live market data is not connected yet. Prices will appear here
-          after our market-data service is configured.
-        </div>
-
-        <div class="price-grid">
-          <article class="price-card">
-            <h3>Gold Spot Price</h3>
-            <div class="price-value">Awaiting live feed</div>
-            <p>GBP per gram • troy ounce • kilogram</p>
-          </article>
-          <article class="price-card">
-            <h3>Silver Spot Price</h3>
-            <div class="price-value">Awaiting live feed</div>
-            <p>GBP per gram • troy ounce • kilogram</p>
-          </article>
-        </div>
-
-        <h2 style="text-align:center; margin-top:48px;">Indicative Scrap Buying Prices</h2>
-        <p class="muted" style="text-align:center;">
-          Gold purity categories
-        </p>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Gold purity</th>
-                <th>Gold content</th>
-                <th>Indicative buying price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>9ct gold</td><td>37.5%</td><td>Awaiting price setup</td></tr>
-              <tr><td>14ct gold</td><td>58.5%</td><td>Awaiting price setup</td></tr>
-              <tr><td>18ct gold</td><td>75.0%</td><td>Awaiting price setup</td></tr>
-              <tr><td>22ct gold</td><td>91.6%</td><td>Awaiting price setup</td></tr>
-              <tr><td>24ct gold</td><td>99.9% (approx.)</td><td>Awaiting price setup</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="muted" style="text-align:center; margin-top:30px;">
-          Silver buying prices will be added once we confirm the silver
-          grades and pricing rules.
-        </p>
-
-        <p class="note">
-          Important: All buying prices, when displayed, will be indicative
-          only and not a guaranteed offer. The final offer may depend on
-          verified purity, tested weight, condition, assessment and the
-          applicable buying terms. Market prices can change.
-        </p>
       </div>
     </section>
 
     <section id="services">
-      <div class="container">
+      <div class="section-inner">
         <div class="section-heading">
-          <div class="eyebrow">What we do</div>
-          <h2>Buying & Selling Precious Metals</h2>
-          <p>
-            Whether you are looking to sell unwanted precious metals or
-            explore new products, contact us to discuss your requirements.
-          </p>
+          <div class="eyebrow">What We Do</div>
+          <h2>Our Precious Metals Services</h2>
+          <p>Professional service and clear communication for every enquiry.</p>
         </div>
 
-        <div class="cards">
+        <div class="grid">
           <article class="card">
-            <div class="number">01</div>
-            <h3>We Buy Scrap Gold</h3>
+            <div class="icon">🪙</div>
+            <h3>Scrap Gold Buying</h3>
             <p>
-              Contact us about unwanted gold items. We can discuss the
-              assessment process, purity and weight before a final offer.
+              Enquire about selling unwanted gold jewellery, scrap gold
+              and other eligible gold items. Assessment and final offers
+              depend on weight, purity and applicable terms.
             </p>
           </article>
+
           <article class="card">
-            <div class="number">02</div>
-            <h3>We Buy Scrap Silver</h3>
+            <div class="icon">✨</div>
+            <h3>Scrap Silver Buying</h3>
             <p>
-              Ask us about selling scrap silver. The applicable assessment
-              and buying terms will be explained before any transaction.
+              Contact us to discuss selling eligible scrap silver items.
+              Final assessments depend on the material, its quality,
+              weight and applicable terms.
             </p>
           </article>
+
           <article class="card">
-            <div class="number">03</div>
-            <h3>New Gold & Silver Products</h3>
+            <div class="icon">🏆</div>
+            <h3>Gold & Silver Products</h3>
             <p>
-              Explore brand-new precious-metal products, including bullion
-              bars, coins, jewellery and other available items. Contact us
-              for current product details and availability.
+              Enquire about gold and silver bullion bars, coins,
+              jewellery and other available precious-metal products.
+              Availability and prices must be confirmed with us.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="about-section" id="investment">
-      <div class="container">
-        <div class="about-box">
-          <div class="eyebrow">Learn about precious metals</div>
-          <h2>Understanding Gold & Silver</h2>
-          <p class="muted">
-            Gold and silver have different uses, market characteristics and
-            risks. Before purchasing, consider purity, premiums, storage,
-            authenticity, resale arrangements and transaction costs.
+    <section class="dashboard" id="markets">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">Precious Metals Overview</div>
+          <h2>Precious Metals Market</h2>
+          <p>
+            Explore the six metals we aim to feature on our market dashboard.
           </p>
-          <p class="muted">
-            Precious-metal prices can rise or fall, and returns are not
-            guaranteed. Information on this website is general education,
-            not personalised financial or investment advice.
+        </div>
+
+        <div class="grid">
+          <article class="card metal-card">
+            <div class="metal-symbol">Au</div>
+            <div class="metal-name">Gold</div>
+            <p>Precious metal used in jewellery and investment products.</p>
+            <div class="price-unavailable">Live price not connected</div>
+          </article>
+
+          <article class="card metal-card">
+            <div class="metal-symbol">Ag</div>
+            <div class="metal-name">Silver</div>
+            <p>Precious metal used in jewellery, bullion and industry.</p>
+            <div class="price-unavailable">Live price not connected</div>
+          </article>
+
+          <article class="card metal-card">
+            <div class="metal-symbol">Pt</div>
+            <div class="metal-name">Platinum</div>
+            <p>A precious metal with industrial and jewellery uses.</p>
+            <div class="price-unavailable">Live price not connected</div>
+          </article>
+
+          <article class="card metal-card">
+            <div class="metal-symbol">Pd</div>
+            <div class="metal-name">Palladium</div>
+            <p>A precious metal used in specialist industrial applications.</p>
+            <div class="price-unavailable">Live price not connected</div>
+          </article>
+
+          <article class="card metal-card">
+            <div class="metal-symbol">Rh</div>
+            <div class="metal-name">Rhodium</div>
+            <p>A rare precious metal with specialist industrial uses.</p>
+            <div class="price-unavailable">Live price not connected</div>
+          </article>
+
+          <article class="card metal-card">
+            <div class="metal-symbol">Ru</div>
+            <div class="metal-name">Ruthenium</div>
+            <p>A rare platinum-group metal used in specialist applications.</p>
+            <div class="price-unavailable">Live price not connected</div>
+          </article>
+        </div>
+
+        <div class="notice">
+          Market-data integration is not yet connected. No live prices are
+          being displayed here. Prices, availability and data sources will
+          need to be verified before this dashboard is used for trading
+          decisions.
+        </div>
+      </div>
+    </section>
+
+    <section id="prices">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">Gold Buying Guide</div>
+          <h2>Understanding Gold Purity</h2>
+          <p>
+            Gold purity affects the amount of pure gold in an item.
+            The values below are purity proportions, not buying prices.
           </p>
-          <a class="button secondary" href="#contact">Ask us a question</a>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Gold Purity Reference</h3>
+
+            <div class="purity">
+              <span>9 carat</span>
+              <strong>37.5% gold</strong>
+            </div>
+
+            <div class="purity">
+              <span>14 carat</span>
+              <strong>58.5% gold</strong>
+            </div>
+
+            <div class="purity">
+              <span>18 carat</span>
+              <strong>75.0% gold</strong>
+            </div>
+
+            <div class="purity">
+              <span>22 carat</span>
+              <strong>91.6% gold</strong>
+            </div>
+
+            <div class="purity">
+              <span>24 carat</span>
+              <strong>Approximately 99.9%</strong>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Indicative Buying Prices</h3>
+            <p>
+              Our buying-price information has not yet been configured.
+              We will only publish prices after a verified market-data
+              source and approved pricing rules have been connected.
+            </p>
+            <br>
+            <p>
+              Final offers may depend on testing, purity, weight,
+              condition and the applicable assessment terms.
+            </p>
+            <a class="button" href="https://wa.me/447927999822"
+               target="_blank" rel="noopener noreferrer">
+              Ask About Selling Gold
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>Silver Assessments</h3>
+            <p>
+              Silver items need to be assessed according to their
+              composition, purity and weight. Accepted grades and
+              buying-price rules have not yet been configured.
+            </p>
+            <br>
+            <p>
+              Contact us before visiting to discuss your item
+              and the assessment process.
+            </p>
+            <a class="button" href="https://wa.me/447927999822"
+               target="_blank" rel="noopener noreferrer">
+              Ask About Selling Silver
+            </a>
+          </article>
+        </div>
+
+        <div class="notice">
+          All future displayed buying prices should be clearly identified
+          as indicative. They are not guaranteed offers. The final offer
+          is subject to assessment and agreed terms.
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard" id="investment">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">Knowledge & Education</div>
+          <h2>Precious Metals & Investment</h2>
+          <p>Understand the products before making a financial decision.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Gold</h3>
+            <p>
+              Gold is traded globally and is often considered by investors
+              seeking to diversify their holdings. Its market price can rise
+              or fall, and physical products may include additional costs.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Silver</h3>
+            <p>
+              Silver has both investment and industrial uses. Its market
+              price can be volatile, and physical silver products may
+              involve premiums, storage considerations and transaction costs.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Know the Risks</h3>
+            <p>
+              Precious metals do not guarantee a profit. Prices can fall,
+              selling costs may apply and it may take time to find a buyer.
+              Research carefully and consider independent financial advice.
+            </p>
+          </article>
+        </div>
+
+        <div class="notice">
+          This section is for general educational purposes only. It is not
+          personal financial, investment or tax advice, and it does not
+          constitute a recommendation to buy or sell any asset.
         </div>
       </div>
     </section>
 
     <section id="about">
-      <div class="container">
-        <div class="about-box">
-          <div class="eyebrow">Our company</div>
-          <h2>Elia Goldsmiths Group</h2>
-          <p class="muted">
-            Our aim is to provide a professional, straightforward point of
-            contact for customers interested in selling scrap gold and
-            silver or purchasing new precious-metal products.
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">Our Company</div>
+          <h2>About Elia Goldsmiths Group</h2>
+        </div>
+
+        <div class="contact-panel">
+          <p>
+            Elia Goldsmiths Group focuses on scrap gold and scrap silver
+            buying, alongside enquiries for gold and silver products.
+            Our aim is to provide a professional, transparent experience
+            and clear communication throughout the enquiry process.
           </p>
-          <p class="muted">
-            We value clear communication, careful assessment and helping
-            customers understand the process before proceeding.
+          <p>
+            We encourage customers to contact us before visiting so we
+            can discuss their requirements and confirm the next steps.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="price-section">
-      <div class="container">
-        <div class="contact-box">
-          <div class="eyebrow">Get in touch</div>
-          <h2>Let's Talk Precious Metals</h2>
-          <p class="muted">
-            Please contact us on WhatsApp before visiting so we can discuss
-            your enquiry and confirm the next steps.
+    <section class="promo" id="contact">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">Contact Our Team</div>
+          <h2>Let's Discuss Your Enquiry</h2>
+          <p>
+            Contact us before visiting to discuss your item or product enquiry.
           </p>
-          <div class="buttons" style="justify-content:center;">
-            <a class="button primary" href="https://wa.me/447927999822">
-              Chat with us on WhatsApp
-            </a>
-          </div>
-          <address>
-            <strong style="color:var(--light-gold);">Business address</strong><br>
-            The Foundry Business Centre<br>
-            Grenley Street<br>
-            Knottingley, West Yorkshire<br>
-            WF11 8AX, United Kingdom
-          </address>
+        </div>
+
+        <div class="contact-panel">
+          <h3 style="color: var(--gold-light);">Elia Goldsmiths Group</h3>
+          <p><strong>Address:</strong> The Foundry Business Centre,
+            Grenley Street, Knottingley, West Yorkshire, WF11 8AX,
+            United Kingdom</p>
+          <p><strong>Telephone:</strong> +44 7927 999822</p>
+
+          <a class="button"
+             href="https://wa.me/447927999822"
+             target="_blank" rel="noopener noreferrer">
+            Contact Us on WhatsApp
+          </a>
         </div>
       </div>
     </section>
@@ -526,11 +690,45 @@
 
   <footer>
     <p>© <span id="year"></span> Elia Goldsmiths Group. All rights reserved.</p>
-    <p>Gold and silver prices are subject to market movements and applicable terms.</p>
+    <p>Luxury · Professionalism · Precious Metals</p>
+    <p style="margin-top: 10px;">
+      Prices and product availability must be confirmed with us.
+    </p>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    const promotions = [
+      {
+        title: "Discover Our Precious Metals Services",
+        text: "Speak with our team about selling scrap gold or silver or enquiring about gold and silver products."
+      },
+      {
+        title: "Thinking About Selling Gold?",
+        text: "Contact us to discuss your gold items and learn about the assessment process."
+      },
+      {
+        title: "Explore Gold & Silver Products",
+        text: "Enquire about bullion bars, coins, jewellery and other precious-metal products."
+      }
+    ];
+
+    let currentPromotion = 0;
+
+    function rotatePromotion() {
+      currentPromotion =
+        (currentPromotion + 1) % promotions.length;
+
+      document.getElementById("promo-title").textContent =
+        promotions[currentPromotion].title;
+
+      document.getElementById("promo-text").textContent =
+        promotions[currentPromotion].text;
+    }
+
+    setInterval(rotatePromotion, 6000);
   </script>
 </body>
 </html>
